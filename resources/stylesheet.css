@@ -1,0 +1,295 @@
+h1 {
+  font-family: chantal,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 52px;
+  padding: 0 20px 0 20px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+h2 {
+font-family: nimbus-sans-extended, sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+
+#toggle {
+  display: inline;
+  margin: auto;
+  text-align: center;
+  font-family: nimbus-sans-extended, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+ul {
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
+li {
+display: inline;
+padding: 0px 64px 0px 64px;
+}
+
+.inactive {
+color: black;
+text-decoration: none;
+}
+
+.active {
+text-decoration: underline;
+color: black;
+}
+
+content {
+display: flex;
+margin-top: 50px;
+justify-content: center;
+}
+
+#move{
+  display: flex;
+  justify-content: space-between;
+}
+
+#monthDisplay{
+  display: block;
+  text-align: center;
+  font-family: nimbus-sans-extended, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button {
+width: 75px;
+cursor: pointer;
+border: none;
+outline: none;
+padding: 5px;
+border-radius: 10px;
+box-shadow: 4px 4px 8px 1px rgb(0 0 0 / 25%);
+color: #ee5a16;
+font-family: nimbus-sans, sans-serif;
+font-weight: 300;
+font-size: 12px;
+}
+
+button:hover {
+  color: #ffd3bf;
+}
+
+#top {
+padding: 10px;
+color: #d36c6c;
+font-size: 26px;
+font-family: sans-serif;
+display: block;
+justify-content: space-between;
+}
+
+#top button {
+background-color: #ffd3bf;
+}
+
+#top button:hover {
+  background-color: #ee5a16;
+}
+
+#container {
+width: 770px;
+font-family: nimbus-sans,sans-serif;
+font-weight: 300;
+font-style: normal;
+}
+
+#weekdays {
+width: 100%;
+display: flex;
+color: #ee5a16;
+text-align: center;
+}
+
+#weekdays div {
+width: 100px;
+padding: 10px;
+}
+
+#calendar {
+width: 100%;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+}
+.day {
+  width: 100px;
+  padding: 10px;
+  height: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: white;
+  margin: 5px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 3px 0px #ffc8ae85;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.day:hover {
+  background-color: #ffc8ae
+}
+
+.day + #currentDay {
+  background-color:#ee5a16;
+}
+
+.day + .selectedDay{
+  background-color: #b9ffae;
+}
+
+.habit {
+  padding: 2px 2px 2px 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 42px;
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+}
+.padding {
+  cursor: default !important;
+  background-color: #ffc8ae2c !important;
+  box-shadow: none !important;
+}
+
+#newHabitModal, #deleteHabitModal, #newEntryModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #ffe7dd;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 20px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+}
+
+#habitInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+}
+#habitInput.error {
+  border: 2px solid rgb(216, 0, 0);
+}
+
+.entry {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.entrytext{
+  display: inline;
+  font-family: nimbus-sans-extended, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.col {
+  float: left;
+  width: 20px;
+  height: 20px;
+}
+
+label{
+  font-family: nimbus-sans-extended, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#habitColor, #logSelection{
+  display: flex;
+  font-family: nimbus-sans, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  padding: 4px 24px 4px 4px;
+  margin-top: 8px;
+}
+
+#cancelButton, #deleteButton {
+  background-color: #767676;
+  color: white;
+  font-size: 14px;
+  margin-top: 1em;
+
+}
+#saveEntryButton, #saveHabitButton, #closeButton {
+  background-color: #9f12ce;
+  color: white;
+  margin-top: 1em;
+  font-size: 14px;
+}
+#habitText {
+  font-size: 14px;
+}
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+}
+
+#options {
+    padding: 10px;
+    color: #ee5a16;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: block;
+    text-align: center;
+}
+
+.optButton {
+  width: 250px;
+  padding: 15px 5px 15px 5px;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+  margin-top: 1.5em;
+  background-color:#ffd3bf;
+  font-size: 24px;
+  font-family: nimbus-sans-extended, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  box-shadow: 4px 4px 8px 1px rgb(0 0 0 / 25%);
+}
+
+.optButton:hover {
+  color: #ffd3bf;
+  background-color: #ee5a16;
+}
+
+p {
+  padding-top: 1.5em;
+  font-family: nimbus-sans-extended, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
