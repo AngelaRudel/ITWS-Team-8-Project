@@ -11,4 +11,4 @@ The calendar and habit-adding functionality, as well as the bare CSS framework i
 
 The code was adapted to support our team's mockup appearance and overall functionality. Specifically, the addition/deletion of events was implemented as the addition of new habits and deletion of entries/habits; all other functionality is original code.
 
-Some features may not be fully correct/function as properly intended: the addition of 4+ entries in one day, the proper assignment of colors in entry displays with more than one habit, deleting a habit from an entry, 
+Some features may not be fully correct/function as properly intended: the addition of 4+ entries in one day, the proper assignment of colors in entry displays with more than one habit, deleting a habit from an entry.
