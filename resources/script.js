@@ -23,21 +23,19 @@ function displayEntries(date) {
     clicked = date;
 
     //finding an event that exists for this day
-    const habitsForDay = habits.filter(h => h.date === clicked);
+    const habitsForDay = trackedHabits.filter(h => h.date === clicked);
     console.log(habitsForDay);
     
     if(habitsForDay) {
-        document.getElementById('habitText').innerText = '';
-      
         for(let i=0; i < habitsForDay.length; i++){
-            //make single entry div
+            document.getElementById('habitText').innerText = '';
             const entrydiv = document.createElement('div');
-            $(entrydiv).addClass('entry')
+            $(entrydiv).addClass('entry');
             const colorblock = document.createElement('div');
-            $(colorblock).addClass('col');
-            $('.col').css('background-color', habitsForDay[i].color);
             const entrytext = document.createElement('p');
             $(entrytext).addClass('entrytext');
+            $(colorblock).addClass('col');
+            $(colorblock).css('background-color', habitsForDay[i].color);
             entrytext.innerText = habitsForDay[i].title;
             
             entrydiv.appendChild(colorblock);
@@ -45,21 +43,24 @@ function displayEntries(date) {
 
             document.getElementById('entries').appendChild(entrydiv);
             
-            
-            /*const txt = document.createElement('div');
+            $(entrydiv).click(function() {
+                $(entrytext).addClass('selectedtext');
+                $(entrytext).css('color', 'white');
+                $('#deleteButton').click(() => deleteHabit(entrytext.innerText));  
+            });
 
-            $("#entry").css('background-color', habitsForDay[i].color);
-
-            txt.classList.add('habitText');
-            txt.innerText = habitsForDay[i].title;
-            //document.getElementById('habitText').innerHTML += habitsForDay[i].title + "<br>";*/
         }
-
-        $(deleteHabitModal).css('display', 'block');
-        $('#deleteButton').click(() => deleteHabit());   
+        
+        $(deleteHabitModal).css('display', 'block'); 
     } else if(habitsForDay === []) {
         document.getElementById('habitText').innerText = 'No entry yet!';
     }
+
+    $('.closeModal').click(function() { 
+        $(deleteHabitModal).css('display', 'none');
+        $(backDrop).css('display', 'none');
+        document.getElementById('entries').innerHTML = '<p id="habitText"></p>';
+    });
 
     $(backDrop).css('display', 'block');
 }
@@ -164,8 +165,9 @@ function closeModal() {
     $('#modalBackDrop').css('display', 'none');
     $(deleteHabitModal).css('display', 'none');
     habitInput.value = '';
+
     $(habitInput).removeClass('error');
-    document.getElementById('logSelection').value = '';
+    //document.getElementById('logSelection').value = '';
     clicked = null;
     loadCal();
 }
@@ -216,8 +218,8 @@ function logEntry() {
 }
 
 //-----------------------------------------------DELETE ENTRY-----------------------------
-function deleteHabit() {
-    trackedHabits = trackedHabits.filter(h => h.date !== clicked);
+function deleteHabit(hab) {
+    trackedHabits = trackedHabits.filter(h => h.title !== hab);
     localStorage.setItem('trackedHabits', JSON.stringify(trackedHabits));
     closeModal();
 }
@@ -244,9 +246,9 @@ function initButtons() {
 
     $('#saveEntryButton').click(() => logEntry());
 
-    $('#cancelButton').click(() => closeModal());
+    $('.cancelButton').click(() => closeModal());
 
-    $('#closeButton').click(() => closeModal());
+    $('.closeButton').click(() => closeModal());
 }
 
 initButtons();
@@ -256,6 +258,7 @@ loadCal();
 function loadDaily() {
   $('#calendar').hide();
   $('#weekdays').hide();
+  $('#monthDisplay').hide();
   $('#calview').click(function(){
       $('#calendar').show();
       loadCal();

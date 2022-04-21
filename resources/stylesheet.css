@@ -1,19 +1,36 @@
 h1 {
-  font-family: chantal,sans-serif;
-  font-weight: 500;
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 400;
   font-style: normal;
   font-size: 52px;
   padding: 0 20px 0 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  float: left;
+}
+
+h2 {
+  font-family: nimbus-sans-extended, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h4 {
+  font-family: nimbus-sans-extended, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  float: right;
+  padding: 12px 20px 0 20px;
   margin-top: 20px;
   margin-bottom: 0px;
 }
 
-h2 {
-font-family: nimbus-sans-extended, sans-serif;
-font-weight: 400;
-font-style: normal;
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
 }
-
 
 #toggle {
   display: inline;
@@ -169,7 +186,7 @@ flex-wrap: wrap;
   display: none;
   z-index: 20;
   padding: 25px;
-  background-color: #ffe7dd;
+  background-color: #fff1ec;
   box-shadow: 0px 0px 3px black;
   border-radius: 20px;
   width: 350px;
@@ -228,19 +245,33 @@ label{
   margin-top: 8px;
 }
 
-#cancelButton, #deleteButton {
+.cancelButton, .closeModal {
   background-color: #767676;
   color: white;
   font-size: 14px;
   margin-top: 1em;
-
 }
+
+#deleteButton {
+  background-color: #ee3316;
+  color: white;
+  font-size: 14px;
+  margin-top: 1em;
+}
+
 #saveEntryButton, #saveHabitButton, #closeButton {
-  background-color: #9f12ce;
+  background-color: #3cb22a;
   color: white;
   margin-top: 1em;
   font-size: 14px;
 }
+
+#verynicemessage {
+  font-size: 14px;
+  padding: 0 0 20px 0;
+  text-align: center;
+}
+
 #habitText {
   font-size: 14px;
 }

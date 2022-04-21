@@ -9,12 +9,17 @@
 
     <!---fonts--->
     <link rel="stylesheet" href="https://use.typekit.net/esz4azc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Patrick+Hand&display=swap" rel="stylesheet">
+
   </head>
   
   <body>
     <div id="menu">
       <header>
-        <h1>Habitrack</h1>
+        <h1>HABITRACK</h1>
+        <h4>Welcome back! :)</h4>
       </header>
   
       <!---toggle between calendar and individual day--->
@@ -66,7 +71,7 @@
 			</select>
 
 			<button id="saveHabitButton">Save</button>
-			<button id="cancelButton">Cancel</button>
+			<button class="cancelButton">Cancel</button>
 		</div>
 
 		<div id="deleteHabitModal">
@@ -76,19 +81,20 @@
 				<!--new entries will enter here-->
 			</div>
 
+      <p id="verynicemessage">You're doing great!</p>
 			<button id="deleteButton">Delete</button>
-			<button id="closeButton">Close</button>
+			<button class="closeModal">Close</button>
 		</div>
 
 		<div id="newEntryModal">
 			<h2>Log Entry</h2>
-			<label for="logSelection">Which habit would you like to track?</label>
+			<label for="logSelection">Which habit would you like to track today?</label>
 			<select name="hab" id="logSelection">
 				
 			</select>
 
 			<button id="saveEntryButton">Save</button>
-			<button id="cancelButton">Cancel</button>
+			<button class="cancelButton">Cancel</button>
 		</div>
 
 		<div id="modalBackDrop"></div>
