@@ -286,6 +286,13 @@ label{
   background-color: rgba(0,0,0,0.8);
 }
 
+
+#dateDisplay {
+  font-family: nimbus-sans-extended, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 #options {
     padding: 10px;
     color: #ee5a16;
