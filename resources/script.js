@@ -34,6 +34,7 @@ function displayEntries(date) {
             const colorblock = document.createElement('div');
             const entrytext = document.createElement('p');
             $(entrytext).addClass('entrytext');
+            $(colorblock).addClass('col');
             $(colorblock).css('background-color', habitsForDay[i].color);
             entrytext.innerText = habitsForDay[i].title;
             
