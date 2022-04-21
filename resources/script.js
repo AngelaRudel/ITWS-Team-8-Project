@@ -105,6 +105,7 @@ function loadCal() {
     for(let i=1; i <= (paddingDays+daysInMonth); i++){
         const sqr = document.createElement('div');
         const dayStr = `${month+1}/${i-paddingDays}/${year}`;
+        const crntDate = new Date(year, month, i-paddingDays);
 
         $(sqr).addClass('day');
 
@@ -127,9 +128,23 @@ function loadCal() {
               sqr.id = 'currentDay';
            }
 
+
+           document.getElementById('dateDisplay').innerText = date.toLocaleDateString('en-us', {
+            weekday: 'long',
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+           });
+
            var timesClicked = 0;
            $(sqr).click(function() {
                timesClicked++;
+               document.getElementById('dateDisplay').innerText = crntDate.toLocaleDateString('en-us', {
+                weekday: 'long',
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric'
+               });
 
                if (timesClicked === 1 && ($(sqr).hasClass('selectedDay'))) {
                    displayEntries(dayStr);
