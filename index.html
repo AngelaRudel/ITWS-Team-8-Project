@@ -1,115 +1,116 @@
 <!DOCTYPE html>
 <html>
-  
-  <head>
-    <meta charset="utf-8" />
-    <title>Team 8 ITWS Final Project</title>
-    <script type="text/javascript" src="resources/jquery-3.1.1.min.js"></script>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Team 8 ITWS Final Project</title>
+	<script type="text/javascript" src="resources/jquery-3.1.1.min.js"></script>
 	<link rel="stylesheet" href="resources/stylesheet.css">
 
-    <!---fonts--->
-    <link rel="stylesheet" href="https://use.typekit.net/esz4azc.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Patrick+Hand&display=swap" rel="stylesheet">
+	<!---fonts--->
+	<link rel="stylesheet" href="https://use.typekit.net/esz4azc.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Patrick+Hand&display=swap"
+		rel="stylesheet">
 
-  </head>
-  
-  <body>
-    <div id="menu">
-      <header>
-        <h1>HABITRACK</h1>
-        <h4>Welcome back! :)</h4>
-      </header>
-  
-      <!---toggle between calendar and individual day--->
-      <div id="toggle">
-        <ul>
-          <li><a id="calview" class="active" href="#" onclick="toggleView()">Calendar View</a></li>
-				  <li><a id="dailyview" class="inactive" href="#" onclick="toggleView()">Daily View</a></li>
-        </ul>
-      </div>	  
-    </div>
-      
-    <content>
-      <div id="container">
-        <div id="top">
-			<div id="monthDisplay"></div>
+</head>
 
-			<div id="move">
-				<button id="backButton">Back</button>
-				<button id="nextButton">Next</button>
-			</div>
+<body>
+	<div id="menu">
+		<header>
+			<h1>HABITRACK</h1>
+			<h4>Welcome back! :)</h4>
+		</header>
+
+		<!---toggle between calendar and individual day--->
+		<div id="toggle">
+			<ul>
+				<li><a id="calview" class="active" href="#" onclick="toggleView()">Calendar View</a></li>
+				<li><a id="dailyview" class="inactive" href="#" onclick="toggleView()">Daily View</a></li>
+			</ul>
 		</div>
+	</div>
 
-        
-        <div id="weekdays">
-          <div>Sunday</div>
-          <div>Monday</div>
-          <div>Tuesday</div>
-          <div>Wednesday</div>
-          <div>Thursday</div>
-          <div>Friday</div>
-          <div>Saturday</div>
-        </div>
-        
-        <div id="calendar"></div>
+	<content>
+		<div id="container">
+			<div id="top">
+				<div id="monthDisplay"></div>
 
-		<div id="newHabitModal">
-			<h2>New Habit</h2>
-			<input id="habitInput" placeholder="Habit Name" />
-			<label for="habitColor">Select Color</label>
-			<select name="color" id="habitColor">
-				<option value="#d41111"> Red </option>
-				<option value="#ff8a0d"> Orange </option>
-				<option value="#ffe70d"> Yellow </option>
-				<option value="#2fcc08"> Green </option>
-				<option value="#0c88ff"> Blue </option>
-				<option value="#bd09e6"> Purple </option>
-				<option value="#000000"> Black </option>
-				<option value="#808080"> Gray </option>
-			</select>
-
-			<button id="saveHabitButton">Save</button>
-			<button class="cancelButton">Cancel</button>
-		</div>
-
-		<div id="deleteHabitModal">
-			<h2>Today's Entry</h2>
-			<div id="entries">
-				<p id="habitText"></p>
-				<!--new entries will enter here-->
+				<div id="move">
+					<button id="backButton">Back</button>
+					<button id="nextButton">Next</button>
+				</div>
 			</div>
 
-      <p id="verynicemessage">You're doing great!</p>
-			<button id="deleteButton">Delete</button>
-			<button class="closeModal">Close</button>
+
+			<div id="weekdays">
+				<div>Sunday</div>
+				<div>Monday</div>
+				<div>Tuesday</div>
+				<div>Wednesday</div>
+				<div>Thursday</div>
+				<div>Friday</div>
+				<div>Saturday</div>
+			</div>
+
+			<div id="calendar"></div>
+
+			<div id="newHabitModal">
+				<h2>New Habit</h2>
+				<input id="habitInput" placeholder="Habit Name" />
+				<label for="habitColor">Select Color</label>
+				<select name="color" id="habitColor">
+					<option value="#d41111"> Red </option>
+					<option value="#ff8a0d"> Orange </option>
+					<option value="#ffe70d"> Yellow </option>
+					<option value="#2fcc08"> Green </option>
+					<option value="#0c88ff"> Blue </option>
+					<option value="#bd09e6"> Purple </option>
+					<option value="#000000"> Black </option>
+					<option value="#808080"> Gray </option>
+				</select>
+
+				<button id="saveHabitButton">Save</button>
+				<button class="cancelButton">Cancel</button>
+			</div>
+
+			<div id="deleteHabitModal">
+				<h2>Today's Entry</h2>
+				<div id="entries">
+					<p id="habitText"></p>
+					<!--new entries will enter here-->
+				</div>
+
+				<p id="verynicemessage">You're doing great!</p>
+				<button id="deleteButton">Delete</button>
+				<button class="closeModal">Close</button>
+			</div>
+
+			<div id="newEntryModal">
+				<h2>Log Entry</h2>
+				<label for="logSelection">Which habit would you like to track today?</label>
+				<select name="hab" id="logSelection">
+
+				</select>
+
+				<button id="saveEntryButton">Save</button>
+				<button class="cancelButton">Cancel</button>
+			</div>
+
+			<div id="modalBackDrop"></div>
+
+			<div id="options">
+				<h3 id="dateDisplay"></h3>
+				<button class="optButton" id="addEntry">Add Daily Entry</button>
+				<button class="optButton" id="startHabit">Start New Habit</button>
+				<p>Keep up the good work!</p>
+			</div>
+
+
 		</div>
-
-		<div id="newEntryModal">
-			<h2>Log Entry</h2>
-			<label for="logSelection">Which habit would you like to track today?</label>
-			<select name="hab" id="logSelection">
-				
-			</select>
-
-			<button id="saveEntryButton">Save</button>
-			<button class="cancelButton">Cancel</button>
-		</div>
-
-		<div id="modalBackDrop"></div>
-
-		<div id="options">
-			<h3 id="dateDisplay"></h3>
-			<button class="optButton" id="addEntry">Add Daily Entry</button>
-			<button class="optButton" id="startHabit">Start New Habit</button>
-			<p>Keep up the good work!</p>
-		</div>
-
-      
-      </div>
-    </content>
-	<script defer type="text/javascript" src="resources/script.js"></script>
-    </body>
+	</content>
+	<script type="text/javascript" src="resources/script.js"></script>
+</body>
 
 </html>

@@ -2,7 +2,7 @@ ITWS Team 8 Final Project README
 
 Github repo link: https://github.com/AngelaRudel/ITWS-Team-8-Project
 
-Team members: Liora Sims, Nila Gao, Angela Rudel
+Team members (Discord ID): Liora Sims (bess#4488), Nila Gao (nils#9336), Angela Rudel (Tigerfire77#7646)
 
 __________________________________
 README:

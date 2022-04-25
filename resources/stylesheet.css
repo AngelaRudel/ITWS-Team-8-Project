@@ -43,37 +43,37 @@ header {
 }
 
 ul {
-margin-top: 0px;
-margin-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 li {
-display: inline;
-padding: 0px 64px 0px 64px;
+  display: inline;
+  padding: 0px 64px 0px 64px;
 }
 
 .inactive {
-color: black;
-text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 .active {
-text-decoration: underline;
-color: black;
+  text-decoration: underline;
+  color: black;
 }
 
 content {
-display: flex;
-margin-top: 50px;
-justify-content: center;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
 }
 
-#move{
+#move {
   display: flex;
   justify-content: space-between;
 }
 
-#monthDisplay{
+#monthDisplay {
   display: block;
   text-align: center;
   font-family: nimbus-sans-extended, sans-serif;
@@ -82,17 +82,17 @@ justify-content: center;
 }
 
 button {
-width: 75px;
-cursor: pointer;
-border: none;
-outline: none;
-padding: 5px;
-border-radius: 10px;
-box-shadow: 4px 4px 8px 1px rgb(0 0 0 / 25%);
-color: #ee5a16;
-font-family: nimbus-sans, sans-serif;
-font-weight: 300;
-font-size: 12px;
+  width: 75px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 1px rgb(0 0 0 / 25%);
+  color: #ee5a16;
+  font-family: nimbus-sans, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
 }
 
 button:hover {
@@ -100,16 +100,16 @@ button:hover {
 }
 
 #top {
-padding: 10px;
-color: #d36c6c;
-font-size: 26px;
-font-family: sans-serif;
-display: block;
-justify-content: space-between;
+  padding: 10px;
+  color: #d36c6c;
+  font-size: 26px;
+  font-family: sans-serif;
+  display: block;
+  justify-content: space-between;
 }
 
 #top button {
-background-color: #ffd3bf;
+  background-color: #ffd3bf;
 }
 
 #top button:hover {
@@ -117,30 +117,31 @@ background-color: #ffd3bf;
 }
 
 #container {
-width: 770px;
-font-family: nimbus-sans,sans-serif;
-font-weight: 300;
-font-style: normal;
+  width: 770px;
+  font-family: nimbus-sans, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 #weekdays {
-width: 100%;
-display: flex;
-color: #ee5a16;
-text-align: center;
+  width: 100%;
+  display: flex;
+  color: #ee5a16;
+  text-align: center;
 }
 
 #weekdays div {
-width: 100px;
-padding: 10px;
+  width: 100px;
+  padding: 10px;
 }
 
 #calendar {
-width: 100%;
-margin: auto;
-display: flex;
-flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
+
 .day {
   width: 100px;
   padding: 10px;
@@ -155,15 +156,16 @@ flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .day:hover {
   background-color: #ffc8ae
 }
 
-.day + #currentDay {
-  background-color:#ee5a16;
+.day+#currentDay {
+  background-color: #ee5a16;
 }
 
-.day + .selectedDay{
+.day+.selectedDay {
   background-color: #b9ffae;
 }
 
@@ -176,13 +178,16 @@ flex-wrap: wrap;
   width: 10px;
   display: inline-block;
 }
+
 .padding {
   cursor: default !important;
   background-color: #ffc8ae2c !important;
   box-shadow: none !important;
 }
 
-#newHabitModal, #deleteHabitModal, #newEntryModal {
+#newHabitModal,
+#deleteHabitModal,
+#newEntryModal {
   display: none;
   z-index: 20;
   padding: 25px;
@@ -206,6 +211,7 @@ flex-wrap: wrap;
   outline: none;
   border: none;
 }
+
 #habitInput.error {
   border: 2px solid rgb(216, 0, 0);
 }
@@ -216,7 +222,7 @@ flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
-.entrytext{
+.entrytext {
   display: inline;
   font-family: nimbus-sans-extended, sans-serif;
   font-weight: 300;
@@ -230,13 +236,14 @@ flex-wrap: wrap;
   height: 20px;
 }
 
-label{
+label {
   font-family: nimbus-sans-extended, sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
-#habitColor, #logSelection{
+#habitColor,
+#logSelection {
   display: flex;
   font-family: nimbus-sans, sans-serif;
   font-weight: 300;
@@ -245,7 +252,8 @@ label{
   margin-top: 8px;
 }
 
-.cancelButton, .closeModal {
+.cancelButton,
+.closeModal {
   background-color: #767676;
   color: white;
   font-size: 14px;
@@ -259,7 +267,9 @@ label{
   margin-top: 1em;
 }
 
-#saveEntryButton, #saveHabitButton, #closeButton {
+#saveEntryButton,
+#saveHabitButton,
+#closeButton {
   background-color: #3cb22a;
   color: white;
   margin-top: 1em;
@@ -275,6 +285,7 @@ label{
 #habitText {
   font-size: 14px;
 }
+
 #modalBackDrop {
   display: none;
   top: 0px;
@@ -283,7 +294,7 @@ label{
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 
@@ -294,12 +305,12 @@ label{
 }
 
 #options {
-    padding: 10px;
-    color: #ee5a16;
-    font-size: 26px;
-    font-family: sans-serif;
-    display: block;
-    text-align: center;
+  padding: 10px;
+  color: #ee5a16;
+  font-size: 26px;
+  font-family: sans-serif;
+  display: block;
+  text-align: center;
 }
 
 .optButton {
@@ -308,7 +319,7 @@ label{
   margin-right: 1.5em;
   margin-left: 1.5em;
   margin-top: 1.5em;
-  background-color:#ffd3bf;
+  background-color: #ffd3bf;
   font-size: 24px;
   font-family: nimbus-sans-extended, sans-serif;
   font-weight: 300;
